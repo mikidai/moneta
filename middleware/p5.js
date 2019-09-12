@@ -7,7 +7,7 @@ function runner(p5) {
   const LETTERS = "MONETA";
   const GAP = WIDTH / (LETTERS.length + 3);
 
-  let chars = LETTERS.split("").map((letter, index) => ({ letter, index }));
+  let chars = LETTERS.split().map((letter, index) => ({letter, index} ));
   let toggle = true;
 
   p5.setup = () => {
@@ -36,9 +36,11 @@ function runner(p5) {
       if (char.y < SIZE || HEIGHT < char.y) {
         char.vy = -char.vy;
       }
-      char.x += char.vx;
-      char.y += char.vy;
-
+      char.x -= char.vx;
+      char.y -= char.vy;
+      
+      char.x += 0.001;
+      char.y += 0.001;
       p5.colorMode(p5.HSB, 100);
       p5.fill(char.color, 20, 100);
       p5.strokeWeight(6);
