@@ -16,7 +16,7 @@
         明細
       </v-btn>
     </div>
-    <v-btn id="btn" class="orange" fab dark large>
+    <v-btn id="btn" class="yellow" fab dark large>
       {{ account.total | yen }}
     </v-btn>
   </div>
@@ -43,7 +43,7 @@ export default {
 #btn {
   grid-row: 1;
   grid-column: 2;
-  font-size: 48px;
+  font-size: 120px;
   height: 320px;
   width: 320px;
   z-index: 1;
@@ -84,7 +84,7 @@ export default {
 #statement-btn {
   grid-row: 9;
   grid-column: 2;
-  font-size: 24px;
+  font-size: 30px;
   color: orange;
   text-decoration: none;
   z-index: 5;
